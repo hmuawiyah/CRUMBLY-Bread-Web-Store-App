@@ -6,8 +6,6 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel'
-import { Button } from './ui/button'
-
 import Autoplay from "embla-carousel-autoplay"
 
 export default function AdsCarousel() {
