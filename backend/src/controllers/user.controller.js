@@ -27,7 +27,6 @@ export const createUser = async (req, res) => {
             },
         })
 
-        // console.log({user});
         return res.status(201).json({
             msg: "success create user!",
             user
@@ -55,7 +54,6 @@ export const readUser = async (req, res) => {
                         id: true
                     }
                 },
-                // reviews: true,
                 addresses: true,
             },
         })
@@ -76,7 +74,6 @@ export const readAllUser = async (req, res) => {
     try {
         const user = await prisma.user.findMany()
 
-        // console.log({user});
         return res.status(200).json({
             msg: "success get all user!",
             user
@@ -115,7 +112,6 @@ export const updateUser = async (req, res) => {
             data: updateData,
         })
 
-        // console.log({user});
         return res.status(201).json({
             msg: "success update user!",
             user
@@ -127,36 +123,11 @@ export const updateUser = async (req, res) => {
     }
 }
 
-// export const updateUserAndAddress = async (req, res) => {
-//   const { id, name, email, password, userAddrId, address, city, province, postalCode, phone } = req.body;
 
-//   updateDataUser = {}
-//   if (name) updateDataUser.name = name
-//   if (email) updateDataUser.email = email
-//   if (password) updateDataUser.password = password ? await bcrypt.hash(password, 10) : undefined 
 
-//   updateDataAddress = {}
-//   if (address) updateDataAddress.address = address
-//   if (city) updateDataAddress.city = city
-//   if (province) updateDataAddress.province = province
-//   if (postalCode) updateDataAddress.phone = postalCode
-//   if (phone) updateDataAddress.phone = phone
 
-//   try {
-//     if (!Object.keys(updateDataUser).length && !Object.keys(updateDataAddress).length) {
-//       return return res.status(400).json({ msg: "No data provided for update" })
-//     }
 
-//     const [updatedUser, updatedAddress] = await prisma.$transaction([
-//       prisma.user.update({ where: { id: id }, updateDataUser }),
-//       prisma.user_Addresses.update({ where: { id: userAddrId }, updateDataAddress }),
-//     ]);
 
-//     return res.json({ msg: "success update user and address!", user: updatedUser, address: updatedAddress });
-//   } catch (err) {
-//     return res.status(500).json({ error: err.message });
-//   }
-// };
 
 
 export const deleteUser = async (req, res) => {
@@ -171,7 +142,6 @@ export const deleteUser = async (req, res) => {
             },
         })
 
-        // console.log({user});
         return res.status(201).json({
             msg: "success delete user!",
             user

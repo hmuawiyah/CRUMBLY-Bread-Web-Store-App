@@ -19,9 +19,6 @@ export const createProduct = async (req, res) => {
             },
         });
 
-        // console.log({
-        //     product
-        // });
         return res.status(201).json({
             msg: "success create product!",
             product
@@ -72,9 +69,6 @@ export const readProduct = async (req, res) => {
             },
         });
 
-        // console.log({
-        //     product
-        // });
         return res.status(200).json({
             msg: "success get product!",
             product
@@ -90,9 +84,6 @@ export const readAllProduct = async (req, res) => {
     try {
         const products = await prisma.products.findMany();
 
-        // console.log({
-        //     products
-        // });
         return res.status(200).json({
             msg: "success get all products!",
             products
@@ -130,9 +121,6 @@ export const updateProduct = async (req, res) => {
             },
             data: updateData,
         });
-        // console.log({
-        //     product
-        // });
         return res.status(200).json({
             msg: "success update product!",
             product
@@ -155,9 +143,6 @@ export const deleteProduct = async (req, res) => {
             },
         });
 
-        // console.log({
-        //     product
-        // });
         return res.status(200).json({
             msg: "success delete product!",
             product

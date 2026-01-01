@@ -1,5 +1,4 @@
 import * as React from "react"
-// import { ChevronRight, File, Folder } from "lucide-react"
 import { IconType } from 'react-icons'
 import { LuFileText, LuSettings, LuLogOut } from 'react-icons/lu'
 
@@ -22,7 +21,6 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
 const data = {
   changes: [
     {
@@ -67,7 +65,6 @@ const data = {
   ],
 }
 
-// const newData = ['Orders', 'Costumers', 'Product']
 
 type dataProps = {
   icon: IconType
@@ -116,7 +113,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarMenu>
             <SidebarMenu>
 
-              {/* LuSettings */}
 
               {newDataFooter.map((val, i) => {
                 const Icon = val.icon
@@ -141,13 +137,3 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 }
 
 
-// const  Tree({ item }: { item: string[] }) {
-//   return (
-//     <SidebarMenuButton
-//       className="data-[active=true]:bg-transparent"
-//     >
-//       <File />
-//       {item}
-//     </SidebarMenuButton>
-//   )
-// }

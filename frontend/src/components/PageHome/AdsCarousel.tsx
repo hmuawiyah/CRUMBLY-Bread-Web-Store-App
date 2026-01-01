@@ -59,7 +59,6 @@ export default function AdsCarousel() {
                 </div>
             </div>
 
-            {/* <Button onClick={() => alert(JSON.stringify(api))}>api</Button> */}
         </>
     )
 }

@@ -96,7 +96,6 @@ export default function BuyerCart() {
 
         <div className="space-y-4">
 
-          {/* <Button onClick={() => { alert(cartViewData.length) }}>cartViewData</Button> */}
 
           {loadingProducts && (
             <LazyOrderCart />

@@ -37,7 +37,6 @@ export default function Home() {
       .then(res => {
         setDataProduct(res.data.products)
         setFilteredDataProduct(res.data.products)
-        // console.log({ data: res.data })
       })
       .catch((error: any) => {
         console.log('Error: ' + error.message)
@@ -61,7 +60,6 @@ export default function Home() {
                 item == 'Fresh Arrivals' ? setFilteredDataProduct(dataProduct) : ''
                 item == 'Special Offers' ? setFilteredDataProduct(shuffled) : ''
                 item == 'Full Menu' ? setFilteredDataProduct(reversed) : ''
-                // setDataProduct() 
               }}
               className={radioFilter == item
                 ? 'border border-primary font-semibold rounded-full opacity-100'
@@ -88,9 +86,6 @@ export default function Home() {
       </div>
 
       <div className='flex justify-center items-center'>
-        {/* <div className='w-full md:w-[70%] aspect-3/1 h-auto bg-gray-400 rounded-lg mt-40'>
-          Ads Delivery
-        </div> */}
         <img src='/images/ads-3.jpg' alt='/images/ads-3.jpg' className='w-full md:w-[70%] aspect-3/1 h-auto rounded-xl mt-20 md:mt-40' />
       </div>
 

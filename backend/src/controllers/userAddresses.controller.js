@@ -40,7 +40,6 @@ export const createUserAddress = async (req, res) => {
 };
 
 export const readUserAddresses = async (req, res) => {
-    // const { id } = req.params;  
     const userId = req.user.id
 
     try {
@@ -49,7 +48,6 @@ export const readUserAddresses = async (req, res) => {
                 userId
             },
         });
-        // console.log({userAddresses});
         return res.status(200).json({
             msg: "success get user address!",
             userAddresses
@@ -65,7 +63,6 @@ export const readAllUserAddresses = async (req, res) => {
 
     try {
         const userAddresses = await prisma.userAddresses.findMany();
-        // console.log({userAddresses});
         return res.status(200).json({
             msg: "success get all user addresses!",
             userAddresses
@@ -107,7 +104,6 @@ export const updateUserAddress = async (req, res) => {
             data: updateData,
         });
 
-        // console.log({userAddresses});
         return res.status(201).json({
             msg: "success update user address!",
             userAddresses
@@ -132,7 +128,6 @@ export const deleteUserAddress = async (req, res) => {
             },
         });
 
-        // console.log({userAddresses});
         return res.status(201).json({
             msg: "success delete user address!",
             userAddresses

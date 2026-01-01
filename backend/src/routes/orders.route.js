@@ -13,6 +13,5 @@ router.put('/update/:id', auth, updateOrder);
 router.delete('/delete/:id',auth, cancelOrder);
 
 router.post('/check', auth, checkExpiredOrder);
-// router.delete('/delete/:id',auth, authorizeRole("ADMIN"), deleteOrder);
 
 export default router;

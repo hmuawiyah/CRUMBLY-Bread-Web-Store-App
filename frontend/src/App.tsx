@@ -79,9 +79,6 @@ function App() {
 
           </Route>
 
-          {/* <Route path='/dashboard' element={
-            <Dashboard />
-        } /> */}
 
 
           <Route path='*' element={

@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs"
 async function main() {
 
     for (let i = 0; i < 5; i++) {
-        // const user = await prisma.user.create({
         await prisma.user.create({
             data: {
                 name: faker.person.fullName(),
@@ -30,7 +29,6 @@ async function main() {
     for (let i = 0; i < 6; i++) {
         await prisma.products.create({
             data: {
-                // id: faker.number.int({ min: 1, max: 9 }),
                 name: faker.food.dish(),
                 description: faker.lorem.words(7), 
                 price: faker.number.int({ min: 5, max: 50 }) * 1000,
